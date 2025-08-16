@@ -11,6 +11,8 @@ if (nombre === "") {
 //agregar array
 amigos.push(nombre);
 console.log(amigos);//verificar en consola
+renderLista();
 //limpiar input
 input.value=="";
+input.focus();
 }
