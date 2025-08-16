@@ -9,6 +9,11 @@ if (nombre === "") {
     alert ("Por favor, inserte un nombre");
     return; //detener funcion si está vacia
     }
+//eliminar duplicados 
+if (amigos.includes(nombre)) {
+    alert("Ese nombre ya está en la lista");
+    return;
+}
 
 //agregar array
 amigos.push(nombre);
