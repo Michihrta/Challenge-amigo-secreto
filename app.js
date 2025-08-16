@@ -1,13 +1,8 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = [];
-function renderLista() {
-const ul = document.getElementById("listaAmigos");
-HTML = "";
-amigos.forEach((nombre) => { 
-const li = document.createElement("li");
-li.textContent = nombre;
-ul.appendChild(li);
-});
+function agregarAmigo() {
+const input = document.getElementById("amigo");
+const nombre = input.value.trim();
 
 //validación
 if (nombre === "") {
