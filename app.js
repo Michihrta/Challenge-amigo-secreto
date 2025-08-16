@@ -9,11 +9,13 @@ if (nombre === "") {
     alert ("Por favor, inserte un nombre");
     return; //detener funcion si está vacia
     }
+
 //agregar array
 amigos.push(nombre);
-console.log(amigos);//verificar en consola
-renderLista();
+mostrarAmigos();
 //limpiar input
 input.value=="";
 input.focus();
 }
+console.log(amigos);//verificar en consola
+
