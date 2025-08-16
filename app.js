@@ -7,3 +7,10 @@ const nombre = input.value.trim();
 if (nombre === "") {
     alert ("Por favor, inserte un nombre");
     return; //detener funcion si está vacia
+    }
+//agregar array
+amigos.push(nombre);
+console.log(amigos);//verificar en consola
+//limpiar input
+input.value=="";
+}
