@@ -13,6 +13,12 @@ function agregarAmigo() {
         return; // detener función si está vacío
     }
 
+ // Evitar duplicados
+    if (amigos.includes(nombre)) {
+        alert("Ese nombre ya fue ingresado");
+        return;
+    }
+
     // Agregar al array
     amigos.push(nombre);
     console.log(amigos); // Verificar en consola
