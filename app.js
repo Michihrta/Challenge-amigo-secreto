@@ -6,16 +6,18 @@ let amigos = [];
 function agregarAmigo() {
     const input = document.getElementById("amigo");
     const nombre = input.value.trim();
- // Evitar duplicados
-    if (amigos.includes(nombre)) {
-        alert("Ese nombre ya fue ingresado");
-        return;
-    }
-    // Validación
+   // Validación
     if (nombre === "") {
         alert("Por favor, inserte un nombre");
         return; // detener función si está vacío
     }
+
+    // Evitar duplicados
+    if (amigos.includes(nombre)) {
+        alert("Ese nombre ya fue ingresado");
+        return;
+    }
+ 
 
 
 
