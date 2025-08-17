@@ -6,18 +6,18 @@ let amigos = [];
 function agregarAmigo() {
     const input = document.getElementById("amigo");
     const nombre = input.value.trim();
-
+ // Evitar duplicados
+    if (amigos.includes(nombre)) {
+        alert("Ese nombre ya fue ingresado");
+        return;
+    }
     // Validación
     if (nombre === "") {
         alert("Por favor, inserte un nombre");
         return; // detener función si está vacío
     }
 
- // Evitar duplicados
-    if (amigos.includes(nombre)) {
-        alert("Ese nombre ya fue ingresado");
-        return;
-    }
+
 
     // Agregar al array
     amigos.push(nombre);
@@ -29,6 +29,19 @@ function agregarAmigo() {
     // Limpiar input
     input.value = "";
     input.focus();
+}
+// Función para sortear un amigo aleatorio
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay amigos para sortear");
+        return;
+    }
+
+    const indice = Math.floor(Math.random() * amigos.length);
+    const resultado = amigos[indice];
+
+    document.getElementById("resultado").innerHTML =
+        `El amigo secreto es: <strong>${resultado}</strong>`;
 }
 
 // Función para mostrar la lista en pantalla
